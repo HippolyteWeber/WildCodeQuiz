@@ -55,7 +55,7 @@ const timerElement = document.querySelector(".timer");
 
 const intervalId = setInterval(timing, 1000);
 
-function timing() {
+function timing(){
   let minutes = parseInt(timer / 60, 10);
   let secondes = parseInt(timer % 60, 10);
 
@@ -64,11 +64,11 @@ function timing() {
 
   timerElement.innerText = `${minutes}:${secondes}`;
   timer--;
-
+ 
   if (timer < 0) {
     clearInterval(intervalId);
     timerElement.innerText = "00:00";
-
+  }
 }
 
 
